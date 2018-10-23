@@ -1,0 +1,32 @@
+<html>
+<body>
+<form action="" method="" id="form">
+First Name: <input type="text" name="first_name">  <br>
+ 
+Last Name: <input type="text" name="last_name">
+<input type="button" value="get提交" onclick="submintGet();">
+<input type="button" value="Post提交" onclick="submintPost();">
+</form>
+<h3>文件上传：</h3>
+选择一个文件上传: <br />
+<form action="/file_upload" method="post" enctype="multipart/form-data">
+<input type="file" name="image" size="50" />
+<br />
+<input type="submit" value="上传文件" />
+</form>
+</body>
+<script type="text/javascript">
+	function submintGet() {
+		var form = document.getElementById('form');
+		form.action = '/process_get';
+		form.method = 'get';
+		form.submit();
+	}
+	function submintPost() {
+		var form = document.getElementById('form');
+		form.action = '/process_post';
+		form.method = 'post';
+		form.submit();
+	}
+</script>
+</html>
