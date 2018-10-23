@@ -38,6 +38,13 @@ router.get('/delete',function(req,res){
   res.send(data);
 })
 
+router.get('/edit',function(req,res){
+  var json = {
+    success: true,
+    message:"操作成功!"
+  }
+  res.send(json);
+})
 
 
 module.exports = router;
